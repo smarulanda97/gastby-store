@@ -7,12 +7,11 @@
 import React, { Fragment } from "react"
 import PropTypes from "prop-types"
 import { Header } from "./../index"
-import { GlobalStyles, Content, Footer, Love } from "./styles"
+import { Content, Footer, Love } from "./styles"
 
 const Layout = ({ children }) => {
   return (
     <Fragment>
-      <GlobalStyles />
       <Header siteTitle={"Geek Store"} />
       <Content>
         <main>{children}</main>

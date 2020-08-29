@@ -26,21 +26,43 @@ export const above = Object.keys(size).reduce((acc, label) => {
 }, {})
 
 export const GlobalStyles = createGlobalStyle`
-  .___gatsby{
+  #___gatsby{
     position: absolute;
+    width: 100%;
   }
+
+  *, *::before, *::after {
+    box-sizing: inherit;
+  }
+
   body {
-    margin: 0;
-    background-color: red;
+    margin: 0 auto;
   }
-  main{
+
+  main {
     padding-top: 3.5rem;
   }
+
+  ul, li, h1, h2, h3, p, button {
+    margin: 0;
+  }
+
+  ul {
+    list-style: none;
+  }
+
+  button {
+    background: transparent;
+    border: 0;
+    outline: 0;
+  }
+
   ${above.medium`
    main{
       padding-top: calc(3.5rem - 100vh);
     }
-    `}
+  `}
+  
   ${above.large`
    main{
       padding-top: calc(4.5rem - 100vh);

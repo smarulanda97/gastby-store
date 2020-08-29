@@ -5,3 +5,15 @@
  */
 
 // You can delete this file if you're not using it
+const React = require("react")
+const Layout = require("./src/components/layout/index").default
+const { GlobalStyles } = require("./src/styles/index")
+
+exports.wrapPageElement = ({ element, props }) => {
+  return (
+    <>
+      <GlobalStyles />
+      <Layout {...props}>{element}</Layout>
+    </>
+  )
+}
